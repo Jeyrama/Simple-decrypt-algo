@@ -33,3 +33,5 @@ function decrypt(encryption) {
     res += encryption.split(letter).length - 1;
   return res;
 }
+
+// or
