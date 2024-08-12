@@ -25,3 +25,11 @@ Note:
 
 
 // Solution
+
+function decrypt(encryption) {
+  const asciiLowercase = 'abcdefghijklmnopqrstuvwxyz';
+  let res = "";
+  for (let letter of asciiLowercase) 
+    res += encryption.split(letter).length - 1;
+  return res;
+}
