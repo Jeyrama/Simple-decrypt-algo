@@ -35,3 +35,16 @@ function decrypt(encryption) {
 }
 
 // or
+
+function decrypt(encryption) {
+  const counts = [ ...encryption ].reduce((counts, char) => {
+    let pos = char.charCodeAt(0) - 97;
+    
+    if (0 <= pos && pos <= 25)
+      counts[pos]++;
+    return counts;
+    
+  }, new Array(26).fill(0));
+  
+  return counts.join('');                         
+}
